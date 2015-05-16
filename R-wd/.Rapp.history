@@ -1,0 +1,38 @@
+load(".RData")
+source("https://github.com/hadley/httr/blob/master/demo/oauth2-github.r")
+oauth_endpoints("github")
+library(httr)
+oauth_endpoints("github")
+myapp <- oauth_app("b7e91ac85fd6e5b34588", "5431aaf5a627e865530f88a36e0de212711d992e")
+myapp <- oauth_app("b7e91ac85fd6e5b34588")
+myapp <- oauth_app("githubquiz2", "b7e91ac85fd6e5b34588", "5431aaf5a627e865530f88a36e0de212711d992e")
+myapp
+github_token <- oauth2.0_token(oauth_endpoints("b7e91ac85fd6e5b34588"), myapp)
+myapp <- oauth_app("githubquiz2", "b7e91ac85fd6e5b34588", "5431aaf5a627e865530f88a36e0de212711d992e")
+github_token <- oauth2.0_token(oauth_endpoints("b7e91ac85fd6e5b34588"), myapp)
+oauth_endpoints("github")
+github_token <- oauth2.0_token(oauth_endpoints("https://github.com/login/oauth/access_token"), myapp)
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+gtoken <- config(token = github_token)
+gtoken
+req <- GET("https://api.github.com/repos/jtleek/datasharing/forks", gtoken)
+req
+req <- with_config(gtoken, GET("https://api.github.com/repos/jtleek/datasharing/forks"))
+req
+myapp
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+github_token
+myapp
+gtoken
+github_token
+myapp <- oauth_app("githubquiz2", "b7e91ac85fd6e5b34588", "5431aaf5a627e865530f88a36e0de212711d992e")
+myapp
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+github_token
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+github_token
+oauth_endpoints("githubquiz2")
+oauth_endpoints("github")
+gtoken
+req <- GET("https://api.github.com/repos/jtleek/datasharing/forks", gtoken)
+req

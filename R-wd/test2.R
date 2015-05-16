@@ -1,0 +1,10 @@
+library(httr)
+library(httpuv)
+library(RJSONIO)
+library(jsonlite)
+
+#Sys.setenv(GITHUB_CONSUMER_KEY="cfa7694be7c1fdaa5394",GITHUB_CONSUMER_SECRET="8015d71e822ed1e961d74c13e7543d84e7879670")
+Sys.setenv(GITHUB_CONSUMER_KEY="b7e91ac85fd6e5b34588",GITHUB_CONSUMER_SECRET="5431aaf5a627e865530f88a36e0de212711d992e")
+consumer_key <- Sys.getenv("GITHUB_CONSUMER_KEY")
+myapp <- oauth_app("github",key=consumer_key)
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
